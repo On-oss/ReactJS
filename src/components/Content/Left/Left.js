@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Content = () => {
+const LeftContent = () => {
   return (
     <div id="content">
       {/* this is the content for menu */}
@@ -55,38 +55,7 @@ const Content = () => {
           <li><a href="#">Menu item 6</a></li>
         </ul>
       </div>
-
-      {/* this is a content for item */}
-      <div id="right-content">
-        <h2>Product :</h2>
-        <div id="products">
-          {[
-            { name: 'LUMIX DMC-G2', image: 'mayanh1.jpg' },
-            { name: 'LUMIX DMC-G3', image: 'mayanh2.jpg' },
-            { name: 'LUMIX DMC-G2', image: 'mayanh3.jpg' },
-            { name: 'LUMIX DMC-G3', image: 'mayanh2.jpg' },
-            { name: 'LUMIX DMC-G2', image: 'mayanh3.jpg' }
-          ].map((product, index) => (
-            <div className="product" key={index}>
-              <div className="text">
-                <div className="p-name"><a href="item.html">{product.name}</a></div>
-              </div>
-              <div className="p-img">
-                <img src={`images/${product.image}`} width={200} height={200} alt={product.name} />
-              </div>
-              <div className="text">
-                <div className="p-cat">DIGITAL CAMERA</div>
-                <div className="p-price">Please Call</div>
-                <input type="button" className="button" name="add" defaultValue="Add to cart" />
-              </div>
-              <div className="clear" />
-            </div>
-          ))}
-          <div style={{ clear: 'both' }} />
-        </div>
       </div>
-    </div>
-  );
-};
-
-export default Content;
+    );  
+}
+export default LeftContent;
